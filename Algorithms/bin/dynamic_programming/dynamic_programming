@@ -1,0 +1,37 @@
+Dynamic Programming:
+Dynamic Programming (DP) is an algorithm technique for solving an optimization problem by breaking it down into simpler subproblems and utilizing the fact that the optimal solution to the overall problem depends upon the optimal solution to its subproblems
+
+DP is just like divide and conquer where we store old values to reuse them again (Only in some cases)
+Optimal Substructure: If any problem's overall optimal solution can be constructed from the optimal solutions of its subproblem then this problem has optimal substructure (e.g:- Fib(n) = Fib(n-1) + Fib(n-2)
+Overlapping subproblem: subproblem are smaller versions of the original problem. Any problem has overlapping sub-problems if finding its solution involves solving the same subproblem multiple times
+
+Approaches of Dynamic Programming (DP) :
+1. Top-Down Approach (Memorization)
+2. Bottom-Up Approach (Tabulation)
+
+Top-Down Approach (Memorization):
+Solve the bigger problem by recursively finding the solution to smaller subproblems whenever we solve a sub-problem we cache its result so that we don't end up solving it repeatedly if i's called multiple times. This technique of storing the results of already solved subproblems is called memorization
+e.g:- Fibonacci series 0, 1, 1, 2, 3, 5, 8, 13...   --> Fib(N) = Fib(N-1) + Fib(N-2)
+Algorithm for e.g:-
+Fib(n, memo):
+	if (n<1) return error message
+	if (n=1) return 0
+	if (n=2) return 1
+	if not n in memo:
+		memo[n] = Fib(n-1, memo) + Fib(n-2, memo)
+	return memo[n];
+	
+Bottom-Up Approach (Tabulation):
+Tabulation is the opposite of the top-down approach and avoids recursion. In this approach, we solve the problem "bottom-up" (i.e. by solving all the related subproblems first). This is done by filling up a table. Based on the results in the table, the solution to the top/original problem is then compared.
+e.g:- Fibonacci series 0, 1, 1, 2, 3, 5, 8, 13...   --> Fib(N) = Fib(N-1) + Fib(N-2)
+Algorithm for e.g:-
+Fib(n):
+	tb = [0, 1]
+	for in in range (2, n+1):
+		tb.append(tb[i-1] + tb[i-2])
+	return tb[n-1]
+
+Time Complexity's for Fibonacci example:
+Divide and Conquer --> O(c^n)
+Top Down --> O(n)
+Bottom UP --> O(n)

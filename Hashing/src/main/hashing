@@ -1,0 +1,51 @@
+what is Hashing? why we need it?
+Hashing is a method of sorting and indexing data. the idea behind hashing is to allow large amounts of data. The idea behind hashing is to allow large amounts of data to be indexed using keys commonly created by formulas.
+It is time efficient in case of search operations (O(1)/O(n))
+
+Hashing Terminology:
+Hash function:- It is a function that can be used to map of arbitrary size of data of fixed size.
+Key:- Input data by a user
+Hash value:- A value that is returned by Hash function
+Hash table:- It is a data structure which implements an associative array abstract data type, a structure that can map keys to values
+Collision:- A collision occurs when two different keys to a hash function produce the same output.
+
+Hash functions (e.g's):
+1. mod function: int mod(int number, int size) { return number%size; }
+2. ASCII function:
+int modASCII(String word, int cellNumber) {
+	int total = 0;
+	for(int i=0;i<word.length();i++){
+		total+=word.charAt(i);
+	}
+	return total%cellNumber;
+}
+
+properties of good Hash function:
+1. It distributes hash values uniformly across hash tables
+2. It has to use all the input data.
+
+Types of collision Resolution techniques.
+1. Direct chaining
+2. Open Addressing: Colliding elements are stored in other vacant buckets. During storage and lookup these are found through so called probing.
+	-Linear probing
+	-Quadratic probing
+	-Double Hashing
+	
+Pros and Cons of Resolution Techniques:
+1. Direct Chaining
+	pro:- Hash table never gets full
+	con:- Huge Linked List causes performance leaks (Time complexity for search operation becomes O(n))
+2. Open Addressing
+	pro:- Easy Implementation
+	con:- when Hash Table is full, creation of new Hash table affects performance (Time complexity for search operation becomes O(n))
+If the input size is known we always use "Open addressing"
+If we perform deletion operation frequently we use "Direct chaining".
+
+Practical use of Hashing:
+Password verification:- password is converted to hash value & stored in server.
+file system:- File path is mapped to physical location on disk, File path is converted to hash value & stored in disk.
+
+Hashing vs other DS:
+pro:- on an average Insertion/Deletion/Search Operations take O(1) time.
+con:- when Hash Function is not good enough Insertion/Deletion/search operations take O(n) time.
+Hashing Time Complexity:- O(1)/O(n)

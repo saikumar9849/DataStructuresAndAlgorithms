@@ -1,0 +1,59 @@
+AVL Tree:
+an AVL Tree is a self balancing Binary Search Tree(BST) where the difference between heights of left and right subtrees cannot be more than one for all nodes.
+
+If any time heights of left and right subtrees differ by more than one, then rebalancing is done to restore AVL property, this process is called rotation.
+
+common operations on AVL Tree:
+1. creation of AVL Trees
+2. search for a node i AVL Trees
+3. Traverse all nodes in AVL Trees
+4. Insert a node in AVL Trees
+5. Delete a node from AVL trees
+6. Delete the entire AVL trees
+
+Insert a node in AVL:
+case1. Rotation is not required -> when AVL tree is balanced after inserting a node then rotation is not required.
+case2. Rotation is Required -> when AVL Tree is not balanced.
+
+Delete a node in AVL:
+case1. Rotation is not required
+		1. The node to be deleted is a leaf node
+		2. The node to be deleted has only one child node
+		3. The node to be deleted has two children node
+case2. Rotation is required
+		1. Left Left condition (LL)
+		2. Left Right condition (LR)
+		3. Right Right condition (RR)
+		4. Right Left condition (RL)
+
+Their are four conditions are their to perform the rotation.
+1. LL-Left left condition -> perform right rotation.
+2. LR-Left right condition -> perform 1. Left Rotation, and then 2. Right Rotation
+3. RR-Right right condition -> perform left rotation.
+4. RL-Right right condition -> perform 1. Right Rotation, and then 2. Left Rotation
+
+Algorithm for right rotation:
+rotateRight(disbalancedNode){
+	newRoot = disbalancedNode.leftChild
+	disbalancedNode.leftChild = disbalancedNode.leftChild.rightChild
+	newRoot.rightChild = disbalancedNode
+	update height of disbalancedNode and newRoot
+	return newRoot
+}
+
+Algorithm for left rotation:
+rotateLeft(disbalancedNode){
+	newRoot = disbalancedNode.rightChild
+	disbalancedNode.rightChild = disbalancedNode.rightChild.leftChild
+	newRoot.leftChild = disbalancedNode
+	update height of disbalancedNode and newRoot
+	return newRoot
+}
+
+Time and space complexity of AVL:
+create AVL 				--> TC-O(1), SC-O(1)
+Traversal AVL  			--> TC-O(n), SC-O(n)
+Insert a node to AVL    --> TC-O(logN), SC-O(logN)
+Search a node in AVL	--> TC-O(logN), SC-O(logN)
+Delete node from Tree	--> TC-O(logN), SC-O(logN)
+Delete Entire Tree      --> TC-O(1), SC-O(1)

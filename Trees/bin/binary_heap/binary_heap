@@ -1,0 +1,35 @@
+A Binary Heap is a Binary Tree with following properties:
+1. A Binary Heap is either Min Heap or Max Heap. In a Min Binary Heap, the key at the root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree.
+2. It's a complete tree(All levels are completely filled except possibly the last level and the last level has all keys as left as possible). This property of Binary Heap makes them suitable to be stored in an array.
+
+find the minimum or maximum number number among a set of numbers in logN times. And also we want to make sure that inserting additional numbers does not take more than O(logN) time.
+possible Solution:
+1. store the numbers in sorted Array --> Find minimum: O(1) Insertion: O(n)
+2. Store the numbers in Linked List in sorted manner --> Find minimum: O(1) Insertion: O(n)
+
+practical use of Binary Heap:
+1. prim's algorithm
+2. Heap sort
+3. Priority Queue
+
+Common Operations on Binary Heap:
+1. Creation of Binary Heap
+2. Peek top of Binary Heap
+3. Extract Min/Extract Max
+4. Traversal of Binary Heap
+5. size of Binary Heap
+6. Insert value in Binary Heap
+7. Delete the entire Binary Heap
+
+Implementation options:
+1. Array Implementation (preferable)
+2. Reference/pointer Implementation
+
+Time and space complexity of Binary Heap (using array):
+create Binary Heap 				--> TC-O(1), SC-O(n)
+peek of Heap       				--> TC-O(1), SC-O(1)
+size of Heap     		  		--> TC-O(1), SC-O(1)
+Traversal of Heap  				--> TC-O(n), SC-O(1)
+Insert a node to Binary Heap    --> TC-O(logN), SC-O(logN)
+Extract a node from Binary Heap --> TC-O(logN), SC-O(logN)
+Delete Entire Binary Heap       --> TC-O(1), SC-O(1)

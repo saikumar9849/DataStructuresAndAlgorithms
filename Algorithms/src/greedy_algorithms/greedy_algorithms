@@ -1,0 +1,23 @@
+Greedy Algorithm:
+A greedy algorithm is a type of optimization algorithm that makes locally optimal choices at each step to find a globally optimal solution. It operates on the principle of “taking the best option now” without considering the long-term consequences.
+
+It is an Algorithm paradigm that builds the solution piece by piece.
+In each step it chooses the piece that offers most obvious and immediate benefit.
+It fits perfectly for those solutions in which local optimal solutions leads to global (like: min-max problems, some sorting's).
+
+Steps for Creating a Greedy Algorithm:
+1. Define the problem: Clearly state the problem to be solved and the objective to be optimized.
+2. Identify the greedy choice: Determine the locally optimal choice at each step based on the current state.
+3. Make the greedy choice: Select the greedy choice and update the current state.
+4. Repeat: Continue making greedy choices until a solution is reached.
+
+some Greedy Algorithms:
+-> Insertion sort
+-> Selection Sort
+-> Topological sort
+-> prim's Algorithm
+-> Kruskal's Algorithm
+-> Dijkstra's Algorithm
+-> Activity Selection Algorithm
+-> Coin change Problem
+-> Fractional Knapsack problem ....etc..

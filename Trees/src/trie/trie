@@ -1,0 +1,20 @@
+what is a trie? why we need trie?
+A Trie is a tree-based data structure that organizes information in a hierarchy
+
+properties:
+1. It is typically used to store or search strings in a space and time efficient way.
+2. Any node in trie can store non repetitive multiple characters
+3. Every node stores link of the next character of the string
+4. Every node keeps track of 'end of string'
+
+why we need trie:
+To solve many standard problem in efficient way
+1. spelling checker
+2. Auto Completion (e.g:- google search - if we search "algorithm" the next characters will be suggested in google)
+
+common Operations on Tire:
+1. Creation of Tire
+2. Insertion in Tire
+3. Search for a string in tire
+4. Deletion from Tire
+
